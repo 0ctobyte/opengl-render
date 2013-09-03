@@ -12,8 +12,8 @@ endif()
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
 # Default Flags
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -dM")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -dM")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -stdlib=libc++")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -stdlib=libc++")
 	
 # Debug Flags
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} -g -pg")
@@ -42,7 +42,7 @@ endif(WIN32)
 # Requires OpenGL, SFML, and GLEW
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
-find_package(SFML 2.0 REQUIRED system window)
+find_package(SFML 2.1 REQUIRED system window)
 
 # Source files in here
 add_subdirectory(src)
