@@ -460,8 +460,7 @@ GLvoid Mesh::Draw() const
 	
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
 	glVertexAttribPointer(0,4,GL_FLOAT,GL_FALSE,sizeof(Vector3),(GLvoid*)0);
-	glVertexAttribPointer(1,4,GL_FLOAT,GL_FALSE,sizeof(Vector3),
-			(GLvoid*)numVerts);
+	glVertexAttribPointer(1,4,GL_FLOAT,GL_FALSE,sizeof(Vector3),(GLvoid*)((uintptr_t)numVerts));
 	
 	//Loop through each group and bind the index buffer and set the index
 	//pointer. Then draw the elements as triangles using the indices
