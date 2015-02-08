@@ -13,7 +13,7 @@ To build:
 - `cmake ..`
 - `make`
 
-This generates a binary, `Simple3DModelRenderer` under `build/src`
+This generates a binary, `Simple3DModelRenderer`, under `build/src`
 
 To run:
 - Copy `Simple3DModelRenderer` binary to the `resources` directory
